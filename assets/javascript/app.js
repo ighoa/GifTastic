@@ -4,7 +4,7 @@ var topics = ["tom hanks", "denzel washington", "bruce lee", "michael jackson", 
 for (var i=0; i< topics.length; i++) {
   var button = topics[i];
   $("<button>").appendTo("#topicButtons").html(topics[i]);
-  
+  button.attr(data: "topics[i]");
   console.log(topics[i]);
 }
 
