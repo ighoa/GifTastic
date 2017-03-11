@@ -3,14 +3,14 @@ var topics = ["tom hanks", "denzel washington", "bruce lee", "michael jackson", 
 
 for (var i=0; i< topics.length; i++) {
   var button = topics[i];
-  $("<button>").appendTo("#topicButtons");
+  $("<button>").appendTo("#topicButtons").html(topics[i]);
   
   console.log(topics[i]);
 }
 
 $("button").on("click", function() {
       // In this case, the "this" keyword refers to the button that was clicked
-      var topics = $(this).attr("data-person");
+      var topics = $(this).attr("data-topics");
 
       // Constructing a URL to search Giphy for the name of the person who said the quote
       var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
