@@ -14,8 +14,8 @@ $("button").on("click", function() {
       var topics = $(this).attr("data-topics");
 
       // Constructing a URL to search Giphy for the name of the person who said the quote
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        topics[i] + "&api_key=dc6zaTOxFJmzC&limit=10";
+      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+        topics + "&api_key=dc6zaTOxFJmzC&limit=10";
 
       // Performing our AJAX GET request
       $.ajax({
